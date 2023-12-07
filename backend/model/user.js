@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const crypto = require("crypto");
 
 const userSchema = new mongoose.Schema({
   name:{
@@ -49,11 +50,11 @@ const userSchema = new mongoose.Schema({
   avatar:{
     public_id: {
       type: String,
-      required: true,
+      //required: true,
     },
     url: {
       type: String,
-      required: true,
+      //required: true,
     },
  },
  createdAt:{
